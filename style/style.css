@@ -1,0 +1,170 @@
+@font-face{
+  font-family: vcr;
+  src: url(../font/vcr.ttf);
+}
+
+/* end font face declaration, begin common selectors */
+
+*{font-family:vcr, monospace;}
+
+div p, h1{
+  color: #BBB;
+  padding: .25rem;
+}
+
+div p{
+  font-size: 1.5rem;
+}
+
+div h1{
+  font-size: 3rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: #FFF;
+  padding: 25px;
+}
+
+body{
+  background-color: #000;
+}
+
+ul{
+  list-style-image: url("../img/li.png");
+}
+
+/* ==== end common selectors, begin classes ==== */
+
+.wrapper{
+  padding: .02rem;
+}
+
+.centered{
+  margin: auto;
+  text-align: center;
+}
+
+.leftAlignCenText{
+  text-align: left;
+  font-size: 1.25rem;
+  display: inline-block;
+  color: #FFF;
+  list-style-position: inside;
+}
+
+.navbar {
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  min-width: fit-content;
+}
+
+a:link{text-decoration-line: none;}
+
+.links{
+  display:inline-block;
+}
+
+.links a{
+  color: #800;
+  text-decoration: none;
+}
+
+.navbar a{
+  color: #800;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.navbar a:visited{color: #400;}
+
+/* begin audio player cs */
+
+.audioPlayer{padding: 10 10 10 10;}
+.audioShow{visibility:visible;}
+.audioHide{display:none;}
+
+.controlsWrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.blackbg{background-color: #000;}
+
+.smallImg{
+  max-width: 2.5rem;
+  min-width: 2rem;
+  max-height: 2.5rem;
+  min-height: 2rem;
+}
+
+.maxWidth{width:100%}
+
+.controlsWrapper audio{order:1;}
+.fwd{order: 3;}
+
+/* begin IDs */
+
+#banner{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* responsive shit here */
+@media (max-width: 900px) {
+h1 { font-size: 2.2rem; padding: 18px; }
+h2, h3, h4, h5, h6 { padding: 18px; }
+div p { font-size: 1.25rem; padding: .2rem; }
+
+.navbar {
+flex-direction: column;
+gap: .5rem;
+align-items: stretch;
+}
+
+.wrapper { padding: .5rem; }
+
+.controlsWrapper {
+flex-direction: column;
+gap: .5rem;
+align-items: center;
+padding: .5rem 0;
+}
+
+.controlsWrapper audio,
+.controlsWrapper .fwd,
+.controlsWrapper .play,
+.controlsWrapper .prev {
+order: initial;
+width: 100%;
+max-width: 420px;
+}
+
+.smallImg { max-width: 2.2rem; max-height: 2.2rem; }
+
+#banner { width: 100%; height: auto; object-fit: cover; background-color: #000;}
+
+.centered { padding: .25rem; }
+.leftAlignCenText { font-size: 1.05rem; display: block; }
+
+div h1 { font-size: 2.2rem; padding: .5rem; }
+}
+
+@media (max-width: 420px) {
+h1 { font-size: 1.8rem; }
+div p { font-size: 1rem; }
+.navbar { width: 100%; padding: 0 .5rem; }
+.controlsWrapper audio { max-width: 100%; }
+.smallImg { max-width: 1.8rem; max-height: 1.8rem; }
+.leftAlignCenText { font-size: 0.95rem; }
+}
+
+/* Accessibility / touch targets */
+@media (hover: none) and (pointer: coarse) {
+.navbar a { padding: .5rem; display: inline-block; }
+.controlsWrapper button, .controlsWrapper .fwd { min-height: 44px; min-width: 44px; }
+}

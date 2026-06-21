@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- begin head --> 
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hey, it's that keycat guy!</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src = "../script/script.js"></script>
+  </head>
+  <!-- end head, begin body-->
+  <body>
+    <div class = "navbar centered blackbg maxWidth">
+      <a href="#intro">intro</a>
+      <a href="#values"> values </a>
+      <a href="#nowplaying">now playing</a>
+      <a href="#links">links</a>
+      <a href="#blog">blog</a>
+    </div>
+
+    <div class = "wrapper centered maxWidth">
+      <!-- first div: intro -->
+      <div id = "intro" class = "blackbg">
+        <img id = "banner" alt = "keycat banner" src="../img/banner.jpg">
+        <p class = "blackbg"> <b> keycat </b> is an electronic music project emboldened by over a 
+          decade of efforts in the EDM scene. With over a decade of music production experience, 
+          many releases on Spotify, Amazon, Google Play, iTunes, and other music distribution stores, 
+          as well as an EP featured on WBGU-FM under the <i> oksy </i> alias, <b>keycat</b> 
+          is a force to be reckoned with. I hope you enjoy my music as much as I enjoy making it.</p>
+      </div>
+
+      <!--second div: values-->
+      <div id = "values" class = "centered">
+        <h1> what does keycat stand for? </h1>
+
+        <p> the <b>keycat</b> project stands for many values, focused entirely on helping others and building community:</p>
+
+        <ul class = "leftAlignCenText">
+          <li>democratic socialism</li>
+          <li>intellectualism</li>
+          <li>diversity, equity, and inclusion</li>
+          <li>pro-LGBTQ+</li>
+          <li>Buddhist philosophy</li>
+        </ul>
+
+        <p> In addition, I am working against the worst of what the world has to offer: </p>
+
+        <ul class = "leftAlignCenText">
+          <li>capitalism, specifically the bourgeoise </li>
+          <li>artificial intelligence</li>
+          <li>technofeudalism</li>
+          <li>bigotry, hatred, and closed-mindedness</li>
+        </ul>
+      </div>
+
+      <!--third div: nowPlaying-->
+      <!--to do: embed 30 second mp3 files in webpage-->
+      <div id = "nowPlaying" class = "centered">
+        <h1> what are you working on right now? </h1>
+        <p>glad you asked! 😎 check out some WIPs that I'm working on.</p>
+
+        <!-- begin the controls container -->
+        <div class = "controlsWrapper">
+          <div class = "audioContainer">
+            <!-- **** track 1 **** -->
+            <audio class = "audioPlayer audioShow" controls data-trackNum="0">
+            </audio>
+            <!-- **** track 2 **** -->
+            <audio class = "audioPlayer audioHide" controls data-trackNum="1">
+            </audio>
+            <!-- **** track 3 and so on **** -->
+             <audio class = "audioPlayer audioHide" controls data-trackNum="2">
+             </audio>
+          </div>
+          <a onclick="fwd()"><img class = "smallImg fwd" alt="forwardArrow" src = "../img/fwd.png"></a>
+        </div>
+      </div>
+    </div>
+    <div id = "links" class = " centered blackbg">
+      <h1> where can I find your content? </h1>
+      <p> See below for a bunch of links to my stuff, hooray!</p>
+      <ul class = "links">
+        <li><a href="https://www.tiktok.com/@keycatjams">my tiktok! catch news here!</a></li>
+        <li><a href="https://keycat.bandcamp.com/">my bandcamp! my releases are exclusively here!<b> pay what you want!</b></a></li>
+      </ul>
+    </div>
+  </body>
+</html>
